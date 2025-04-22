@@ -7,6 +7,7 @@
 **main computer** 
 
 [Raspberry Pico W](https://www.electrokit.com/raspberry-pi-pico-w)
+
 **steering**
 
 [servo](https://www.electrokit.com/hs-55sub-micro-servo)
