@@ -1,14 +1,17 @@
 # MVP
-# functionalities
+Build a car that can be able to drive forward, backwards and turn. The car should be able to accelerate and brake.
+
+Build a controller to controll if the car should move forward, backwards or turn. The controller Should be able to controll acceleration and
+breaking.
+
+# Functionalities
 - camera on car -> LCD screen on controller
 - buzzers on car -> Button on controller to honk -> button to switch noice
 - MP3 player micro sd + speaker on car -> saftey and car sounds
-## components car
-**main computer** 
+## Components car
+**main computer** [Raspberry Pico W](https://www.electrokit.com/raspberry-pi-pico-w) **AVAILABLE PINS 26** 
 
-[Raspberry Pico W](https://www.electrokit.com/raspberry-pi-pico-w) **AVAILABLE PINS 26** 
-
-1x [steering servo](https://www.electrokit.com/hs-55sub-micro-servo) **PINS 1**
+1x [steering servo](https://www.electrokit.com/hs-55sub-micro-servo) **PINS 1 pwm**
 
 2x [Ultrasonic Sensor](https://www.temu.com/se-en/2-6pcs-hc-sr04p--module-distance-sensor-supports-3-5-5v--handmade-diy-arduino-and-robotics-g-601099948665808.html?_oak_mp_inf=ENDXqOen1ogBGiAxMjQxMzMwNDg1N2U0MTUzOTcxN2ViNjk0YmJmODVhZSDmiIXt5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F3888f076-89c6-48fb-bfc8-330f2a5dd5dc.jpg&spec_gallery_id=601099948665808&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=Mjc5Nw&_oak_gallery_order=1576806353%2C1738414256%2C53601402%2C1501368188%2C473186167&search_key=arduino%20bluetooth&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1745326584806_1q7gd8ohxl&_x_sessn_id=728xyc0bzm&is_back=1)  **PINS 4**
 
@@ -16,17 +19,28 @@
 
 Reciver [RF transmitter + reciever](https://www.temu.com/se-en/1set-433mhz-rf-transmitter-and-receiver-module-kit-for-arduino-arm-mcu--g-601100149881165.html?_oak_mp_inf=EM3yoceo1ogBGiA5OTQ0NWUxZmIyMzk0YjFhYjY4ZTQwMjQ5Y2Y2YzdjZSDl0oDs5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F0cb1a497-22ee-40c6-8797-0456c4f9ae61.jpg&spec_gallery_id=601100149881165&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MTk4MA&_oak_gallery_order=90273639%2C1934513311%2C1138153555%2C2061327865%2C1960921044&search_key=rf%20module&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1745324245458_llxrqyvc69&_x_sessn_id=728xyc0bzm) **PINS 2**
 
-1x [MP3 player](https://www.electrokit.com/mini-mp3-spelare-microsd?gad_source=1&gbraid=0AAAAAD_OrGPTo-T4UPdvbPpy7y46J4vBu&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynp2VuYpQc2K5YdZGdJp9euzhXEJyWAsl-nr-YZNiS0J1Bv4_424A8QaApcAEALw_wcB) **PINS 2**
+1x [MP3 player](https://www.electrokit.com/mini-mp3-spelare-microsd?gad_source=1&gbraid=0AAAAAD_OrGPTo-T4UPdvbPpy7y46J4vBu&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynp2VuYpQc2K5YdZGdJp9euzhXEJyWAsl-nr-YZNiS0J1Bv4_424A8QaApcAEALw_wcB) **PINS 2 uart**
+
+2-4x [Ledlamps](https://www.electrokit.com/lysdiodsats-3mm-5-farger-200st?gad_source=1&gbraid=0AAAAAD_OrGPTo-T4UPdvbPpy7y46J4vBu&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynofBwwC5FIR8Fy4aM-0jqFe18PEio7hexfSB7AsuYfrg649OSlh8joaAivAEALw_wcB) **PINS 4**
+
+1x [små ESP32](https://www.temu.com/se-en/3pcs-esp32-c3-development-board-esp32--development-board-esp32-development-board-g-601100788293620.html?_oak_mp_inf=EPS%2F1%2Feq1ogBGiBjN2E1Nzc4NjM0ODk0ZWU2ODllOGMzMDE0NTJiMTA0MyCO5cjs5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fc9877818-7dfc-4d0e-a68c-14eb0ff6e236.jpg&spec_gallery_id=8286439277&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=ODkwMQ&_oak_gallery_order=1003150235%2C1564091167%2C1889864456%2C702269384%2C1708254068&search_key=esp32&refer_page_el_sn=200049&_x_sessn_id=728xyc0bzm&refer_page_name=search_result&refer_page_id=10009_1745326584806_1q7gd8ohxl&is_back=1) **AVAILABLE PINS 13**
+
+1x [Camera](https://www.electrokit.com/arducam-ov7675-0.3mp-640x480px) or [camera](https://www.temu.com/se-en/ov7670-camera-module-0-3mp-vga-with-cmos-sensor-i2c-interface-compatible-with-arduino---dupont-cable-acrylic-stand-ideal-for-robotics-for-smart-cars-1pc-2pcs-g-601099688070986.html?_oak_mp_inf=EMqeh%2Bum1ogBGiA1YTNkYTIwM2E5Y2E0OTc4YmQwYjIzODM1MjZkOTFiMyC5hIzv5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Fopen%2F2024-09-26%2F1727367618594-396df46ac2684eadb75c9a5f0d0306b2-goods.jpeg&spec_gallery_id=4527707964&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=NTA4Nw&_oak_gallery_order=375467475%2C8334240%2C2000458200%2C1498069338%2C490984017&search_key=arduino%20camera&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1745331865011_39q67x5p5a&_x_sessn_id=728xyc0bzm)
+
+2x [DC-motor 3v](https://www.electrokit.com/dc-motor-3v-16500rpm?gad_source=1&gbraid=0AAAAAD_OrGNVyg-NBGVqD79k5RCep_nE-&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynrbJwN60667soY52DkUJPG9RwjTJb3FqHa7Y_a8XODYTtUuh__DOPEaAhnKEALw_wcB)
 
 
+### Analog components
+1x [Flat sportscar wheels](https://www.amazon.se/BQLZR-4PCS-RC1-Mountain-Pattern/dp/B00LVMTNQ8?crid=2KW9MIDNXUQJL&dib=eyJ2IjoiMSJ9._mOr_V0YBDzLfSQm138RO27mL5AXaYSE0_1PPbVt4F_KGnw2blTjaVpkofCKG27EkF9uAwUitEQMjqFRGCu5v1oeIBTqpATUZ_1HI9mWV_iL9WKc1dmk1C1pVibIDPmwhJxohWRJoCfij8-nHv9dINae6zgFGj316XmILKsZ5aRqLiGJzkDJUsOizHutJCm7oAmPPW8Xy1a0GzVRqbOubqbhuR4Sd6JORam3UoMMqVDzwplBb_4UBo-FtJAj8HIMAxKC61xxCGD_jqUXYTyLm1-lrBDUKEhzG6qhVDp9V7c.oDBJpFzSDFzQ2DZ0hk2KLbzFgGx09mltb3nZUwYTUa0&dib_tag=se&keywords=rc+wheels&qid=1745329995&sprefix=rc+wheels%2Caps%2C87&sr=8-6)
 
 
-## components controller 
-[LCD](https://www.amazon.se/Freenove-Display-Compatible-Arduino-Raspberry/dp/B0B76YGDV4/ref=asc_df_B0B76YGDV4/?tag=shpngadsglede-21&linkCode=df0&hvadid=603116030375&hvpos=&hvnetw=g&hvrand=16076001894671581682&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2752&hvtargid=pla-1982300595807&psc=1&mcid=bc9dd1b08e48365d9b57106b215604fa) **PINS 2** 
+## Components controller 
+[LCD](https://www.amazon.se/Freenove-Display-Compatible-Arduino-Raspberry/dp/B0B76YGDV4/ref=asc_df_B0B76YGDV4/?tag=shpngadsglede-21&linkCode=df0&hvadid=603116030375&hvpos=&hvnetw=g&hvrand=16076001894671581682&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=2752&hvtargid=pla-1982300595807&psc=1&mcid=bc9dd1b08e48365d9b57106b215604fa) **PINS 2 i2c** 
 
-[små ESP32](https://www.temu.com/se-en/3pcs-esp32-c3-development-board-esp32--development-board-esp32-development-board-g-601100788293620.html?_oak_mp_inf=EPS%2F1%2Feq1ogBGiBjN2E1Nzc4NjM0ODk0ZWU2ODllOGMzMDE0NTJiMTA0MyCO5cjs5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fc9877818-7dfc-4d0e-a68c-14eb0ff6e236.jpg&spec_gallery_id=8286439277&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=ODkwMQ&_oak_gallery_order=1003150235%2C1564091167%2C1889864456%2C702269384%2C1708254068&search_key=esp32&refer_page_el_sn=200049&_x_sessn_id=728xyc0bzm&refer_page_name=search_result&refer_page_id=10009_1745326584806_1q7gd8ohxl&is_back=1) **AVAILABLE PINS 13**
+1x [små ESP32](https://www.temu.com/se-en/3pcs-esp32-c3-development-board-esp32--development-board-esp32-development-board-g-601100788293620.html?_oak_mp_inf=EPS%2F1%2Feq1ogBGiBjN2E1Nzc4NjM0ODk0ZWU2ODllOGMzMDE0NTJiMTA0MyCO5cjs5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2Fc9877818-7dfc-4d0e-a68c-14eb0ff6e236.jpg&spec_gallery_id=8286439277&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=ODkwMQ&_oak_gallery_order=1003150235%2C1564091167%2C1889864456%2C702269384%2C1708254068&search_key=esp32&refer_page_el_sn=200049&_x_sessn_id=728xyc0bzm&refer_page_name=search_result&refer_page_id=10009_1745326584806_1q7gd8ohxl&is_back=1) **AVAILABLE PINS 13**
 
 [Buzzers](https://www.temu.com/se-en/10pcs-20pcs-12085-passive-buzzer-12mm-with-42r--mini--buzzers-for-arduino-diy-electronic-projects-3v-12v-g-601099536164571.html?_oak_mp_inf=ENvNz6Km1ogBGiA3OGYwYjNhZjYwYTc0NmQ2YTg1ZTI5ZTljZmZhNTI3MiCwprjs5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Fopen%2F2023-12-01%2F1701400604914-2ab763b9678140459ed0d0723aa2ae97-goods.jpeg&spec_gallery_id=4063361493&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MTY3MA&_oak_gallery_order=1680982856%2C1830067749%2C1178995882%2C1452031739%2C1926111199&search_key=buzzer&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1745326296622_qcjgue8ml6&_x_sessn_id=728xyc0bzm) **PINS 1**
 
 Transmitter [RF transmitter + reciever](https://www.temu.com/se-en/1set-433mhz-rf-transmitter-and-receiver-module-kit-for-arduino-arm-mcu--g-601100149881165.html?_oak_mp_inf=EM3yoceo1ogBGiA5OTQ0NWUxZmIyMzk0YjFhYjY4ZTQwMjQ5Y2Y2YzdjZSDl0oDs5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F0cb1a497-22ee-40c6-8797-0456c4f9ae61.jpg&spec_gallery_id=601100149881165&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MTk4MA&_oak_gallery_order=90273639%2C1934513311%2C1138153555%2C2061327865%2C1960921044&search_key=rf%20module&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1745324245458_llxrqyvc69&_x_sessn_id=728xyc0bzm) **PINS 1**
 
+1x [OLED DISPLAY MODULE](https://www.temu.com/se-en/high-resolution-2-44cm-oled-display-module--128x64-multi-color-options-blue-yellow-white-compatible-with-arduino-esp32--low-power-consumption-g-601099658217397.html?_oak_mp_inf=ELWP6dym1ogBGiBiM2JiOTY0NjRhNzE0YzlhYWFjZjE3ZDY1ZDJiY2M0YyCfsaTu5TI%3D&top_gallery_url=https%3A%2F%2Fimg.kwcdn.com%2Fproduct%2Ffancy%2F906d6f60-bdf2-49af-bd1f-01c0e0d4808c.jpg&spec_gallery_id=601099658217397&refer_page_sn=10009&refer_source=0&freesia_scene=2&_oak_freesia_scene=2&_oak_rec_ext_1=MjQ4MQ&_oak_gallery_order=1128820147%2C1355810711%2C1741569567%2C167608380%2C905988168&search_key=raspberry%20pi%20pico%20screen&refer_page_el_sn=200049&refer_page_name=search_result&refer_page_id=10009_1745328606122_1ps800e7v2&_x_sessn_id=728xyc0bzm&is_back=1) **PINS 2 i2c**
